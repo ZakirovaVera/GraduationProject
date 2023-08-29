@@ -2,21 +2,26 @@
     <header class="header center">
         <div class="header__left">
             <a class="header__left_logo" href="index.html">
-                <img src="@/assets/img/logo_cupcake.svg" alt="ikon_logo" height="55px">
-                <h2 class="header__left_logo-text">Glaze.tmn</h2>
+                <img :src="logotype" alt="ikon_logo" height="55">
+                <h2 class="header__left_logo-text">{{ nameFirma }}</h2>
             </a>
         </div>
         <nav class="header__right">
+            <a href="#">Главная</a>
             <a href="#">Обо мне</a>
-            <label for="burger"><svg width="32" height="23" viewBox="0 0 32 23" fill="none"
+            <a href="#">Видео</a>
+            <a href="#">Доставка</a>
+            <a href="#">Контакты</a>
+            <label for="burger">Меню
+                <!-- <svg width="32" height="23" viewBox="0 0 32 23" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8" />
-                </svg></label>
+                </svg> -->
+            </label>
         </nav>
         <input class="burger__checkbox" id="burger" type="checkbox">
         <div class="burger-menu">
             <div class="burger-menu_box">
-                <h3 class="burger-menu__heading">MENU</h3>
                 <div class="burger-menu__item">
                     <a href="catalog.html" class="burger-menu__title">Торты</a>
                     <!-- <h3 class="burger-menu__title">Торты</h3> -->
@@ -44,7 +49,7 @@
                 <div class="burger-menu__item">
                     <a href="#" class="burger-menu__title">Эскимо / кейк-попс</a>
                 </div>
-                <div class="burger-menu__item">
+                <!-- <div class="burger-menu__item">
                     <a href="#" class="burger-menu__title">Видео</a>
                 </div>
                 <div class="burger-menu__item">
@@ -52,7 +57,7 @@
                 </div>
                 <div class="burger-menu__item">
                     <a href="#" class="burger-menu__title">Контакты</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>
@@ -60,17 +65,18 @@
 
 <script>
 export default {
-    name: "HeaderComponent"
+    name: "HeaderComponent",
+    data() {
+        return {
+            logotype: require('@/assets/img/logo_cupcake.svg'),
+            nameFirma: "Glaze.tmn",
+        }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/vars";
-
-.center {
-    padding-left: calc(50% - $siteWidth / 2);
-    padding-right: calc(50% - $siteWidth / 2);
-}
 
 .box-site {
     overflow: hidden;
@@ -108,7 +114,7 @@ export default {
             padding-left: 4px;
 
             &-text {
-                color: $colorSelectSite;
+                color: $colorWhite;
                 font-size: 40px;
                 font-weight: 400;
                 line-height: 50px;
@@ -124,7 +130,8 @@ export default {
         gap: 33px;
         padding-right: 1rem;
 
-        & a {
+        & a,
+        label {
             color: $colorWhite;
             text-align: center;
             font-family: Jost;
@@ -132,6 +139,10 @@ export default {
             line-height: 25px;
             font-style: normal;
             font-weight: 400;
+
+            &:hover {
+                color: $colorSelectSite;
+            }
         }
     }
 
@@ -174,7 +185,7 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     &__list {
