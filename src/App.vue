@@ -1,10 +1,13 @@
 <template>
-  <div class="box-site"><HeaderComponent />
-  <PromoComponent/></div>
-  
+  <div class="box-site">
+    <HeaderComponent />
+    <PromoComponent />
+    <FooterComponent/>
+  </div>
 </template>
 
 <script>
+import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import PromoComponent from './components/PromoComponent.vue';
 
@@ -14,12 +17,14 @@ export default {
   components: {
     HeaderComponent,
     PromoComponent,
-  }
+    FooterComponent,
+}
 }
 </script>
 
 <style lang="scss">
 @import "@/assets/vars";
+
 * {
   margin: 0;
   padding: 0;
@@ -28,9 +33,10 @@ export default {
 body {
   font-family: 'Lato', sans-serif;
 }
+
 .center {
-    padding-left: calc(50% - $siteWidth / 2);
-    padding-right: calc(50% - $siteWidth / 2);
+  padding-left: calc(50% - $siteWidth / 2);
+  padding-right: calc(50% - $siteWidth / 2);
 }
 
 // img {
@@ -40,8 +46,8 @@ body {
 a {
   text-decoration: none;
 }
+
 .box-site {
   overflow: hidden;
   position: relative;
-}
-</style>
+}</style>
