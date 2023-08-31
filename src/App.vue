@@ -3,6 +3,7 @@
     <HeaderComponent />
     <PromoComponent />
     <FooterComponent/>
+    <ProductListComponent/>
   </div>
 </template>
 
@@ -10,7 +11,7 @@
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import PromoComponent from './components/PromoComponent.vue';
-
+import ProductListComponent from './components/ProductListComponent.vue';
 
 export default {
   name: 'App',
@@ -18,6 +19,7 @@ export default {
     HeaderComponent,
     PromoComponent,
     FooterComponent,
+    ProductListComponent,
 }
 }
 </script>
