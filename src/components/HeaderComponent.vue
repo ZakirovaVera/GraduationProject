@@ -7,10 +7,9 @@
             </a>
         </div>
         <nav class="header__right">
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
             <a href="#">Обо мне</a>
             <a href="#">Видео</a>
-            <a href="#">Доставка</a>
             <a href="#">Контакты</a>
             <label for="burger">Меню
                 <!-- <svg width="32" height="23" viewBox="0 0 32 23" fill="none"
@@ -33,31 +32,14 @@
                 <div class="burger-menu__item">
                     <a href="catalog.html" class="burger-menu__title">Капкейки</a>
                     <!-- <h3 class="burger-menu__title">Капкейки</h3> -->
-                    <ul class="burger-menu__list">
-                        <li><a class="burger-menu__link" href="#">Начинки</a></li>
-                        <li><a class="burger-menu__link" href="#">Оформление</a></li>
-                    </ul>
                 </div>
                 <div class="burger-menu__item">
-                    <a href="catalog.html" class="burger-menu__title">KIDS</a>
+                    <a href="catalog.html" class="burger-menu__title">Трайфлы</a>
                     <!-- <h3 class="burger-menu__title">Трайфлы</h3> -->
-                    <ul class="burger-menu__list">
-                        <li><a class="burger-menu__link" href="#">Начинки</a></li>
-                        <li><a class="burger-menu__link" href="#">Оформление</a></li>
-                    </ul>
                 </div>
                 <div class="burger-menu__item">
                     <a href="#" class="burger-menu__title">Эскимо / кейк-попс</a>
                 </div>
-                <!-- <div class="burger-menu__item">
-                    <a href="#" class="burger-menu__title">Видео</a>
-                </div>
-                <div class="burger-menu__item">
-                    <a href="#" class="burger-menu__title">Доставка</a>
-                </div>
-                <div class="burger-menu__item">
-                    <a href="#" class="burger-menu__title">Контакты</a>
-                </div> -->
             </div>
         </div>
     </header>
@@ -83,15 +65,6 @@ export default {
     position: relative;
 }
 
-.colortext {
-    color: $colorSelectSite;
-}
-
-// .logo {
-//     width: 35px;
-//     height: 35px;
-// }
-
 .header {
     min-height: 75px;
     background: $colorFont;
@@ -114,7 +87,7 @@ export default {
             padding-left: 4px;
 
             &-text {
-                color: $colorWhite;
+                color: $colorSelectSite;
                 font-size: 40px;
                 font-weight: 400;
                 line-height: 50px;

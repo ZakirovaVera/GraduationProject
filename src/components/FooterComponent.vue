@@ -1,91 +1,149 @@
 <template>
-            <footer class="footer center">
-            <p class="footer__text">{{confectionersPhone}}, {{ confectionersName }}</p>
-            <div class="icons">
-                <a class="icon__link" href="#">
-                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32.1883 0H0.737671V32H32.1883V0Z" fill="white" />
-                        <g clip-path="url(#clip0_190_1608)">
-                            <path
-                                d="M16.1368 12.6816C14.0216 12.6816 12.3155 14.3849 12.3155 16.4967C12.3155 18.6084 14.0216 20.3117 16.1368 20.3117C18.2519 20.3117 19.958 18.6084 19.958 16.4967C19.958 14.3849 18.2519 12.6816 16.1368 12.6816ZM16.1368 18.9769C14.7699 18.9769 13.6525 17.8646 13.6525 16.4967C13.6525 15.1287 14.7666 14.0164 16.1368 14.0164C17.507 14.0164 18.6211 15.1287 18.6211 16.4967C18.6211 17.8646 17.5036 18.9769 16.1368 18.9769ZM21.0056 12.5256C21.0056 13.0203 20.6065 13.4154 20.1143 13.4154C19.6188 13.4154 19.223 13.017 19.223 12.5256C19.223 12.0342 19.6221 11.6357 20.1143 11.6357C20.6065 11.6357 21.0056 12.0342 21.0056 12.5256ZM23.5364 13.4287C23.4799 12.2367 23.2072 11.1808 22.3325 10.3109C21.4612 9.441 20.4036 9.16873 19.2097 9.10897C17.9792 9.03924 14.291 9.03924 13.0605 9.10897C11.8699 9.16541 10.8123 9.43768 9.93768 10.3076C9.06302 11.1775 8.79364 12.2334 8.73378 13.4254C8.66394 14.6539 8.66394 18.3361 8.73378 19.5646C8.79031 20.7566 9.06302 21.8125 9.93768 22.6824C10.8123 23.5523 11.8666 23.8246 13.0605 23.8844C14.291 23.9541 17.9792 23.9541 19.2097 23.8844C20.4036 23.8279 21.4612 23.5556 22.3325 22.6824C23.2039 21.8125 23.4766 20.7566 23.5364 19.5646C23.6063 18.3361 23.6063 14.6572 23.5364 13.4287ZM21.9468 20.8828C21.6874 21.5336 21.1852 22.0349 20.53 22.2972C19.5489 22.6857 17.2209 22.5961 16.1368 22.5961C15.0526 22.5961 12.7213 22.6824 11.7435 22.2972C11.0917 22.0383 10.5895 21.5369 10.3268 20.8828C9.93768 19.9033 10.0275 17.5791 10.0275 16.4967C10.0275 15.4142 9.941 13.0867 10.3268 12.1105C10.5862 11.4597 11.0884 10.9584 11.7435 10.6961C12.7246 10.3076 15.0526 10.3972 16.1368 10.3972C17.2209 10.3972 19.5523 10.3109 20.53 10.6961C21.1818 10.9551 21.684 11.4564 21.9468 12.1105C22.3359 13.09 22.2461 15.4142 22.2461 16.4967C22.2461 17.5791 22.3359 19.9066 21.9468 20.8828Z"
-                                fill="black" />
+    <footer class="footer center">
+        <div class="footer__left">
+            <a class="footer__left_logo" href="index.html">
+                <img :src="logotype" alt="ikon_logo" height="55">
+                <h2 class="footer__left_logo-text">{{ nameFirma }}</h2>
+            </a>
+            <h2 class="footer__heading footer__heading-color">Заказ торта в Тюмени</h2>
+            <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eligendi quod
+                est voluptas ducimus aliquid tempora aperiam quidem illum voluptatum!</p>
+        </div>
+        <div class="footer__center">
+            <h2 class="footer__heading">Контакты</h2>
+            <p class="footer__text">{{ confectionersEmail }}</p>
+            <p class="footer__text">{{ confectionersPhone }}</p>
+            <p class="footer__text">{{ confectionersName }}</p>
+        </div>
+        <div class="footer__right">
+            <h2 class="footer__heading">Соц.сети</h2>
+            <div class="footer__right_icon">
+                <a class="footer__right_icon_a" href="#">
+                    <svg viewBox="0 0 176 176" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="_19.vk" data-name="19.vk">
+                                <path
+                                    d="m144.46 0h-144.46v144.46a31.54 31.54 0 0 0 31.54 31.54h144.46v-144.45a31.55 31.55 0 0 0 -31.54-31.55zm-10.35 116.58c-2.33.33-13.71 0-14.3 0a11.15 11.15 0 0 1 -7.9-3.15c-2.4-2.31-4.59-4.86-6.89-7.27a19.63 19.63 0 0 0 -2.24-2c-1.88-1.44-3.74-1.12-4.62 1.09a41.82 41.82 0 0 0 -1.43 7.34c-.16 2.23-1.58 3.65-4.08 3.79-1.56.08-3.11.11-4.65.07a35.5 35.5 0 0 1 -16.09-4 44.07 44.07 0 0 1 -13.75-12 146 146 0 0 1 -15.24-25c-.22-.44-4.65-9.88-4.77-10.32-.4-1.49 0-2.92 1.23-3.41.79-.31 15.4 0 15.64 0a5.09 5.09 0 0 1 4.91 3.53 76.3 76.3 0 0 0 11 19.23 10.2 10.2 0 0 0 2.22 2c1.2.82 2.33.54 2.82-.84a24.48 24.48 0 0 0 1-5.87c.08-3.94 0-6.54-.22-10.48-.14-2.52-1-4.74-4.76-5.41-1.14-.2-1.24-1.15-.51-2.09 1.54-2 3.67-2.28 6-2.4 3.5-.2 7-.06 10.52 0h.76a21.54 21.54 0 0 1 4.59.47 4.19 4.19 0 0 1 3.34 3.73 15.25 15.25 0 0 1 .23 3c-.09 4.3-.3 8.61-.35 12.91a22.72 22.72 0 0 0 .43 5.09c.51 2.3 2.07 2.87 3.67 1.21a56.22 56.22 0 0 0 5.5-6.88 69.5 69.5 0 0 0 7.29-14.13c1-2.56 1.79-3.12 4.54-3.12h15.51a9.27 9.27 0 0 1 2.73.36 2.35 2.35 0 0 1 1.63 3c-.76 3.4-2.6 6.29-4.57 9.08-3.16 4.47-6.48 8.82-9.71 13.23a18.17 18.17 0 0 0 -1.12 1.77c-1.21 2.19-1.12 3.42.64 5.24 2.89 2.95 5.89 5.65 8.57 8.65a50.55 50.55 0 0 1 5.38 7c1.94 3.11.75 6.06-2.95 6.58z">
+                                </path>
+                            </g>
                         </g>
-                        <defs>
-                            <clipPath id="clip0_190_1608">
-                                <rect width="14.8991" height="17" fill="white" transform="translate(8.68396 8)" />
-                            </clipPath>
-                        </defs>
                     </svg>
                 </a>
-                <a class="icon__link" href="#">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M31.6636 0H0.213013V32H31.6636V0Z" fill="white" />
-                        <g clip-path="url(#clip0_190_1612)">
-                            <path
-                                d="M22.4181 12.7411C22.4281 12.8832 22.4281 13.0253 22.4281 13.1675C22.4281 17.5025 19.1509 22.4974 13.161 22.4974C11.3156 22.4974 9.60132 21.9593 8.1593 21.0253C8.42149 21.0558 8.67357 21.0659 8.94585 21.0659C10.4685 21.0659 11.8702 20.5482 12.9895 19.6649C11.5576 19.6345 10.3576 18.6903 9.94415 17.3908C10.1458 17.4213 10.3475 17.4416 10.5593 17.4416C10.8517 17.4416 11.1442 17.4009 11.4164 17.3299C9.92401 17.0253 8.80465 15.7055 8.80465 14.1116V14.071C9.23825 14.3147 9.74249 14.467 10.2769 14.4873C9.39959 13.8984 8.82483 12.8933 8.82483 11.7563C8.82483 11.1472 8.98614 10.5888 9.26851 10.1015C10.8719 12.0913 13.282 13.3908 15.9844 13.5329C15.934 13.2893 15.9038 13.0355 15.9038 12.7817C15.9038 10.9746 17.3559 9.5025 19.1609 9.5025C20.0987 9.5025 20.9457 9.89844 21.5407 10.538C22.2768 10.3959 22.9827 10.1218 23.6079 9.74616C23.3659 10.5076 22.8516 11.1472 22.176 11.5533C22.8315 11.4822 23.4668 11.2994 24.0516 11.0457C23.608 11.6954 23.0533 12.274 22.4181 12.7411Z"
-                                fill="black" />
+                <a class="footer__right_icon_a" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 176">
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="_05.instagram" data-name="05.instagram">
+                                <path d="M103.8,88A15.8,15.8,0,1,1,88,72.2,15.8,15.8,0,0,1,103.8,88Z"></path>
+                                <path
+                                    d="M108.21,48.06H67.79A19.73,19.73,0,0,0,48.06,67.79v40.42a19.73,19.73,0,0,0,19.73,19.73h40.42a19.73,19.73,0,0,0,19.73-19.73V67.79A19.73,19.73,0,0,0,108.21,48.06ZM88,113.87A25.87,25.87,0,1,1,113.86,88,25.91,25.91,0,0,1,88,113.87Zm26-45.34a6.39,6.39,0,1,1,6.39-6.39A6.39,6.39,0,0,1,114,68.53Z">
+                                </path>
+                                <path
+                                    d="M144.46,0H0V144.46A31.54,31.54,0,0,0,31.54,176H176V31.55A31.54,31.54,0,0,0,144.46,0ZM138,108.21A29.83,29.83,0,0,1,108.21,138H67.79A29.83,29.83,0,0,1,38,108.21V67.79A29.83,29.83,0,0,1,67.79,38h40.42A29.83,29.83,0,0,1,138,67.79Z">
+                                </path>
+                            </g>
                         </g>
-                        <defs>
-                            <clipPath id="clip0_190_1612">
-                                <rect width="15.8924" height="16" fill="white" transform="translate(8.1593 8)" />
-                            </clipPath>
-                        </defs>
                     </svg>
                 </a>
             </div>
-        </footer>
+        </div>
+    </footer>
 </template>
 
 <script>
-    export default {
-        name:'FooterComponent',
-        data() {
-            return {
-                confectionersPhone:"+7-929-265-44-96",
-                confectionersName: "Иванова Юлия",
-            }
-        },
-    }
+export default {
+    name: 'FooterComponent',
+    data() {
+        return {
+            confectionersPhone: "+7-929-265-44-96",
+            confectionersName: "Иванова Юлия",
+            confectionersEmail: "mail@mail.com",
+            logotype: require('@/assets/img/logo_cupcake.svg'),
+            nameFirma: "Glaze.tmn",
+        }
+    },
+}
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/vars";
+
 .footer {
-  background-color: $colorFont;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    justify-items: center;
+    margin-bottom: 134px;
+    background: $colorFont;
+    padding-top: 40px;
+    padding-bottom: 96px;
 
-  &__text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FBFBFB;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 1rem;
-  }
+    &__left {
+        padding-left: 1rem;
 
-}
+        &_logo {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+            padding-left: 4px;
 
-.icons {
-  padding-top: 24px;
-  padding-bottom: 23px;
-  padding-right: 1rem;
-}
+            &-text {
+                color: $colorSelectSite;
+                font-size: 40px;
+                font-weight: 400;
+                line-height: 50px;
+                word-wrap: break-word;
+                font-family: DM Serif Display;
+            }
+        }
+    }
 
-.icon__link {
-  transition: background-color 0.3s;
+    &__center {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+    }
 
-  &:hover path:first-child {
-    fill: $colorSelectSite;
-  }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        width: 258px;
 
-  &.icon__link:hover path:last-child {
-    fill: $colorWhite;
-  }
-}
-</style>
+        &_icon {
+            display: flex;
+            gap: 16px;
+
+            &_a svg {
+                fill: $colorWhite;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    &__heading {
+        color: $colorSelectSite;
+        font-size: 25px;
+        font-family: DM Serif Display;
+        font-weight: 400;
+        line-height: 31.25px;
+        word-wrap: break-word;
+        padding-top: 8px;
+
+        &-color {
+            color: $colorWhite;
+            padding: 10px 0 16px;
+        }
+    }
+
+    &__text {
+        color: $colorWhite;
+        font-family: Jost;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.22px;
+    }
+}</style>
