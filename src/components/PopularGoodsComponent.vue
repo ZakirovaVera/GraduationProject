@@ -57,7 +57,7 @@ export default {
     font-weight: 400;
     line-height: 62.5px;
     letter-spacing: 1px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 .product-popular-box{
     display: grid;

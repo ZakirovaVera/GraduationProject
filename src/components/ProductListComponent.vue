@@ -1,6 +1,6 @@
 <template>
-    <section class="product center">
-        <h1>Начинки Тортов</h1>
+    <section class="product-content center">
+        <!-- <h1 class="product-content__title">Начинки Тортов</h1> -->
         <div class="product-box">
             <ProductComponent v-for="filling in fillings" :key="filling.id" :fil="filling" />
         </div>
@@ -74,10 +74,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/vars";
+
+.product-content {
+    padding-top: 120px;
+    padding-bottom: 96px;
+}
+
+.product-content__title {
+    color: $colorSelectSite;
+    text-align: center;
+    font-family: DM Serif Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 62.5px;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+}
+
 .product-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-content: center;
-}
-</style>
+}</style>

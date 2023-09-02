@@ -6,7 +6,12 @@
     <FooterComponent />
     <hr>
     <HeaderComponent />
+    <BannerComponent/>
     <ProductListComponent />
+    <FooterComponent />
+    <hr>
+    <HeaderComponent />
+    
     <FooterComponent />
   </div>
 </template>
@@ -17,6 +22,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import PromoComponent from './components/PromoComponent.vue';
 import ProductListComponent from './components/ProductListComponent.vue';
 import PopularGoodsComponent from './components/PopularGoodsComponent.vue';
+import BannerComponent from './components/BannerComponent.vue';
 
 export default {
   name: 'App',
@@ -25,7 +31,8 @@ export default {
     PromoComponent,
     FooterComponent,
     ProductListComponent,
-    PopularGoodsComponent
+    PopularGoodsComponent,
+    BannerComponent
 }
 }
 </script>

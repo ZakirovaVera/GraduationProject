@@ -28,7 +28,7 @@ export default {
     gap: 16px;
 
     &__img {
-        height: 400px;
+        height: 500px;
         object-fit: cover;
     }
 
