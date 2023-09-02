@@ -1,18 +1,17 @@
 <template>
   <div class="box-site">
-    <HeaderComponent />
-    <PromoComponent />
-    <PopularGoodsComponent/>
-    <FooterComponent />
-    <hr>
-    <HeaderComponent />
-    <BannerComponent/>
-    <ProductListComponent />
-    <FooterComponent />
-    <hr>
-    <HeaderComponent />
-    
-    <FooterComponent />
+    <HeaderComponent :storageData="storages" />
+    <BannerComponent v-if="isPageAboutMe || isProductList" :storageData="storages" />
+
+    <!-- Главная -->
+    <PromoComponent v-if="isPageIndex" />
+    <PopularGoodsComponent v-if="isPageIndex" />
+    <!-- Начинки -->
+    <ProductListComponent v-if="isProductList" />
+    <!-- Обо мне -->
+    <AboutMeComponent v-if="isPageAboutMe" />
+
+    <FooterComponent :storageData="storages"/>
   </div>
 </template>
 
@@ -23,6 +22,7 @@ import PromoComponent from './components/PromoComponent.vue';
 import ProductListComponent from './components/ProductListComponent.vue';
 import PopularGoodsComponent from './components/PopularGoodsComponent.vue';
 import BannerComponent from './components/BannerComponent.vue';
+import AboutMeComponent from './components/AboutMeComponent.vue';
 
 export default {
   name: 'App',
@@ -32,8 +32,27 @@ export default {
     FooterComponent,
     ProductListComponent,
     PopularGoodsComponent,
-    BannerComponent
-}
+    BannerComponent,
+    AboutMeComponent
+  },
+  data() {
+    return {
+      storages: {
+        currentPage: "",
+      }
+    }
+  },
+  computed: {
+    isPageIndex: function () {
+      return this.storages.currentPage === 'index';
+    },
+    isPageAboutMe: function () {
+      return this.storages.currentPage === 'aboutme';
+    },
+    isProductList: function () {
+      return this.storages.currentPage === 'productList';
+    },
+  }
 }
 </script>
 

@@ -1,19 +1,44 @@
 <template>
     <div class="banner center">
         <div class="banner__title">
-            <h1 class="banner__heading">Начинки Тортов</h1>
+            <h1 class="banner__heading">{{ getBannerText }}</h1>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+    props: {
+        storageData: Object
+    },
+    computed: {
+        getBannerText: function () {
+            let currentPageTag = this.storageData.currentPage;
+            if (currentPageTag === "index") {
+                return "Главная";
+            }
+            if (currentPageTag === "aboutme") {
+                return "Обо мне";
+            }
+            if (currentPageTag === "video") {
+                return "Видеоблог";
+            }
+            if (currentPageTag === "contacts") {
+                return "Контакты";
+            }
+            if (currentPageTag === "productList") {
+                return "Начинки";
+            }
+
+            return "Не определено";
+        },
+    },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/_vars.scss" ;
+@import "@/assets/_vars.scss";
+
 .banner {
     // background: url(<path-to-image>), lightgray 50% / cover no-repeat;
     background-image: url(@/assets/img/banner2.jpg);

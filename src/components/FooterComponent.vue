@@ -1,7 +1,7 @@
 <template>
     <footer class="footer center">
         <div class="footer__left">
-            <a class="footer__left_logo" href="index.html">
+            <a class="footer__left_logo" @click="setPageTag('index')" href="#index">
                 <img :src="logotype" alt="ikon_logo" height="55">
                 <h2 class="footer__left_logo-text">{{ nameFirma }}</h2>
             </a>
@@ -59,6 +59,14 @@ export default {
             confectionersEmail: "mail@mail.com",
             logotype: require('@/assets/img/logo_cupcake.svg'),
             nameFirma: "Glaze.tmn",
+        }
+    },
+    props: {
+        storageData: Object
+    },
+    methods: {
+        setPageTag(pageTag) {
+            this.storageData.currentPage = "" + pageTag;
         }
     },
 }

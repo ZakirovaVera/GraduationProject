@@ -1,16 +1,16 @@
 <template>
     <header class="header center">
         <div class="header__left">
-            <a class="header__left_logo" href="index.html">
+            <a class="header__left_logo" @click="setPageTag('index')" href="#index">
                 <img :src="logotype" alt="ikon_logo" height="55">
                 <h2 class="header__left_logo-text">{{ nameFirma }}</h2>
             </a>
         </div>
         <nav class="header__right">
-            <a href="index.html">Главная</a>
-            <a href="#">Обо мне</a>
-            <a href="#">Видео</a>
-            <a href="#">Контакты</a>
+            <a href="#index" @click="setPageTag('index')">Главная</a>
+            <a href="#aboutme" @click="setPageTag('aboutme')">Обо мне</a>
+            <a href="#video" @click="setPageTag('video')">Видео</a>
+            <a href="#contacts" @click="setPageTag('contacts')">Контакты</a>
             <label for="burger">Меню
                 <!-- <svg width="32" height="23" viewBox="0 0 32 23" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@
                     <a href="catalog.html" class="burger-menu__title">Торты</a>
                     <!-- <h3 class="burger-menu__title">Торты</h3> -->
                     <ul class="burger-menu__list">
-                        <li><a class="burger-menu__link" href="#">Начинки</a></li>
+                        <li><a class="burger-menu__link" href="#"  @click="setPageTag('productList')">Начинки</a></li>
                         <li><a class="burger-menu__link" href="#">Оформление</a></li>
                     </ul>
                 </div>
@@ -48,10 +48,18 @@
 <script>
 export default {
     name: "HeaderComponent",
+    props: {
+        storageData: Object
+    },
+    methods: {
+        setPageTag(pageTag) {
+            this.storageData.currentPage = "" + pageTag;
+        }
+    },
     data() {
         return {
             logotype: require('@/assets/img/logo_cupcake.svg'),
-            nameFirma: "Glaze.tmn",
+            nameFirma: "Glaze.tmn"
         }
     },
 }
