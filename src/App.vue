@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       storages: {
-        currentPage: "",
+        currentPage: 'index',
       }
     }
   },

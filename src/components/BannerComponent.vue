@@ -14,9 +14,6 @@ export default {
     computed: {
         getBannerText: function () {
             let currentPageTag = this.storageData.currentPage;
-            if (currentPageTag === "index") {
-                return "Главная";
-            }
             if (currentPageTag === "aboutme") {
                 return "Обо мне";
             }
