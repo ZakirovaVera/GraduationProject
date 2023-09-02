@@ -33,6 +33,8 @@ export default {
 .promo {
     display: flex;
     background: $colorPromo;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     &__img {
         width: 50%;
@@ -40,6 +42,7 @@ export default {
         & img {
             width: 450px;
             height: 100%;
+            border-radius: 0px 80px 0px 80px;
         }
     }
 
@@ -59,7 +62,7 @@ export default {
         font-weight: 700;
         font-size: 48px;
         line-height: 58px;
-        color: $colorFont;
+        color: $colorBackground;
         padding-bottom: 28px;
     }
 

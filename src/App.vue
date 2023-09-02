@@ -2,8 +2,12 @@
   <div class="box-site">
     <HeaderComponent />
     <PromoComponent />
-    <FooterComponent/>
-    <ProductListComponent/>
+    <PopularGoodsComponent/>
+    <FooterComponent />
+    <hr>
+    <HeaderComponent />
+    <ProductListComponent />
+    <FooterComponent />
   </div>
 </template>
 
@@ -12,6 +16,7 @@ import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import PromoComponent from './components/PromoComponent.vue';
 import ProductListComponent from './components/ProductListComponent.vue';
+import PopularGoodsComponent from './components/PopularGoodsComponent.vue';
 
 export default {
   name: 'App',
@@ -20,6 +25,7 @@ export default {
     PromoComponent,
     FooterComponent,
     ProductListComponent,
+    PopularGoodsComponent
 }
 }
 </script>
@@ -52,4 +58,5 @@ a {
 .box-site {
   overflow: hidden;
   position: relative;
-}</style>
+}
+</style>

@@ -72,10 +72,9 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
     justify-items: center;
-    margin-bottom: 134px;
-    background: $colorFont;
-    padding-top: 40px;
-    padding-bottom: 96px;
+    background: $colorBackground;
+    padding-top: 80px;
+    padding-bottom: 104px;
 
     &__left {
         padding-left: 1rem;
@@ -118,6 +117,10 @@ export default {
                 fill: $colorWhite;
                 height: 40px;
                 width: 40px;
+
+                &:hover {
+                    fill: $colorSelectSite;
+                }
             }
         }
     }
@@ -146,4 +149,5 @@ export default {
         line-height: 33px;
         letter-spacing: 0.22px;
     }
-}</style>
+}
+</style>

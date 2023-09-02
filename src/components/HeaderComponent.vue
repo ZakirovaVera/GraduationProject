@@ -67,7 +67,7 @@ export default {
 
 .header {
     min-height: 75px;
-    background: $colorFont;
+    background: $colorBackground;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
